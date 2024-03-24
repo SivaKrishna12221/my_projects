@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+.image1 {
+	width: 80px;
+	height: 80px;
+	border-radius: 60px;
+	
+}
+
+.parentdiv {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav {
+	background-color: #333;
+	overflow: hidden;
+}
+
+nav a {
+	float: left;
+	color: white;
+	text-align: center;
+	padding: 12px 16px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: white;
+	color: black;
+}
+
+h1 {
+	text-align: center;
+}
+
+#img1 {
+	height: 285px;
+	width: 350px;
+	border-radius: 25px;
+	margin: 5px 0px 19px 33px;
+	box-shadow: 1px 1px 20px 1px gray;
+}
+
+
+.points {
+	font-size: large;
+	font-family: math;
+}
+</style>
+</head>
+
+<body>
+
+	<div class="parentdiv">
+		<div>
+			<img class="image1" src="new yvu image.png" alt="yvu">
+		</div>
+		<div>
+			<img class="image1" src="yvu name image2.png" alt="yvu name">
+		</div>
+		<div>
+			<img class="image1" src="vemana img1.jpg" alt="vemana">
+		</div>
+	</div>
+
+	<nav class="nav1">
+		<a href="addNewStudent.html">AddNewStudents</a>
+		<a href="insertNewResult.html">InsertNewResults</a>
+	    <a href="registeredStudents.jsp">RegisteredStudents</a>
+	    <a href="allStudentResult.jsp">AllStudentResult</a>
+		<a href="index.html">Logout</a>
+	</nav>
+	<div class="scroll">
+		<h1>Welcome to admin home page</h1>
+	</div>
+	<img id="img1" src="enter image.png" alt="image" align="right">
+	<div class="points">
+		<ul type="dot">
+			<h3>Features of admin</h3>
+			<li>Admin can Add new student details like
+				course,branch,rollnumber,name,father name,gender</li>
+			<li>Admin can insert new results according to subject wise
+				marks.</li>
+			<li>Admin can see registered student details.</li>
+			<li>Admin can see all student results data.</li>
+			<li>After completion of his work Admin can logout.</li>
+		</ul>
+	</div>
+
+</body>
+
+</html>

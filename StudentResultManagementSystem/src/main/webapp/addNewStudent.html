@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(221 213 183);
+            
+        }
+        .div1{
+            background-color: rgb(219 203 215 / 44%);
+             width:300px;
+             height:350px;
+             box-sizing: content-box;
+             padding:20px 50px;
+             top:20%;
+             left:30%;
+             position: absolute;
+             border: 1px solid black;
+             border-radius:20px;
+    
+        }
+        input {
+            background-color: transparent;
+            padding:4px 4px;
+            width:100%;
+            color:white;
+            text-transform:uppercase;
+        }
+        .div1 input[type="submit"]:hover
+        {  
+            color:rgb(93, 74, 113);
+            background-color:darkorchid;
+            }
+        .div1 input[type="submit"]
+        {
+          background: rgb(98, 79, 117);
+        }
+        .div1 a:hover{
+            color:rgb(22, 36, 61);
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Add new Student</h1>
+    <hr>
+    <form name="studentform" method="post" action="addNewStudent.jsp" onsubmit=" return validateStudentDetails()" >
+        <div class="div1">
+       <label>CourseName :</label>
+       <input type="text" name="course" placeholder="enter course name"><br>
+       <label>BranchName :</label>
+       <input type="text" name="branch" placeholder="enter branch name"><br>
+       <label>Roll number:</label>
+       <input type="text" name="rollnumber" placeholder="enter roll number"><br>
+       <label>Name       :</label>
+       <input type="text" name="name" placeholder="enter name"><br>
+       <label>Father name:</label>
+       <input type="text" name="fathername" placeholder="enter father name"><br>
+       <label>Gender     :</label>
+       <input type="text" name="gender" placeholder="enter gender"><br><br>
+       
+       <center><input type="submit" name="submit" value="save"></center><br>
+        
+        </form>
+       
+       <center><a href="adminHome.html">back</a></center>
+       
+        </div>
+        <script>
+        function validateStudentDetails() {
+           /* var coursename = document.studentform.course.value;
+            var choosename = "BSC";
+            if (coursename != choosename) {
+                alert("sorry only for bsc");
+                return false;
+            }
+            var branchname = document.studentform.branch.value;
+            var choosename = "MSCS";
+            if (branchname != choosename) {
+                alert("sorry only for mscs");
+                return false;
+            }*/
+            var rollno = document.studentform.rollnumber.value;
+            if (rollno.length != 12) {
+                alert("Roll number should be 12 digits");
+                return false;
+            }
+            var name = document.studentform.name.value;
+            if (name == null || name =="") {
+                alert("name should not be blank");
+                return false;
+            }
+            var fathername = document.studentform.fathername.value;
+            if (fathername == null || fathername == "") {
+                alert("fathername should not be blank");
+                return false;
+            }
+            
+            else {
+                
+                return true;
+            }
+        }
+    </script>
+  
+</body>
+</html>

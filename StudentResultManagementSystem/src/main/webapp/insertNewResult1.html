@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert New Result</title>
+    <style>
+        body{
+            background-color: rgb(94, 172, 94);
+            
+        }
+        .div1{
+            background-color:rgb(201, 175, 175);
+             width:300px;
+             height:400px;
+             box-sizing: content-box;
+             padding:20px 50px;
+             top:20%;
+             left:30%;
+             position: absolute;
+             border: 1px solid black;
+    
+        }
+        input {
+            background-color: transparent;
+            padding:4px 4px;
+            width:100%;
+            color:white;
+            text-transform:uppercase;
+        }
+        .div1 input[type="submit"]:hover
+        {  
+            color:rgb(93, 74, 113);
+            background-color:darkorchid;
+            }
+        .div1 input[type="submit"]
+        {
+          background: rgb(98, 79, 117);
+        }
+        .div1 a:hover{
+            color:rgb(22, 36, 61);
+            
+        }
+        
+    </style>
+
+</head>
+<body >
+    <form method="post" action="insertNewResult.jsp" onsubmit="return validatemarks()">
+        <h1>Insert New Result</h1>
+        <hr 1px >
+        <div class="div1">
+            <label>rollnumber</label> 
+            <input type="text" name="rollnumber" placeholder="enter rollnumber">
+           <label>Sanskrit:</label>
+           <input type="text" name="number1" placeholder="Enter sankrit marks">
+           <label>English:</label>
+           <input type="text" name="number2" placeholder="Enter English marks">
+           <label>Maths:</label>
+           <input type="text" name="number3" placeholder="Enter Maths marks">
+           <label>Statistics</label>
+           <input type="text" name="number4" placeholder="Enter Statistics marks">
+           <label>Computers</label> 
+           <input type="text" name="number5" placeholder="Enter Computers marks">
+           <label>Statistics</label>
+           <input type="text" name="number6" placeholder="Enter statistics practical marks">
+           <label>Computers </label>
+           <input type="text" name="number7" placeholder="Enter computers practical marks">
+           <br><br>
+           <input type="submit" name="submit" value="save">
+           <br><br>
+           <center><a href="index.html">back</a></center>
+        </div> 
+        
+    </form>
+    <script>
+        function validateMarks()
+        {
+          
+          var sankrit=document.getElementsByName('number1');
+          var English=document.getElementsByName('number2');
+          var maths=document.getElementByName('number3');
+          var statistics=document.getElementsByName('number4');
+          var comps=document.getElementByName('number5');
+          var statsprac=document.getElementsByName('number6');
+          var compsprac=document.getElementsByName('number7');
+          if(typeof sanskrit!== 'number' ||sanskrit<0 ||sanskrit>76)
+          {
+            alert("marks should not be greater than 76");
+            return false;
+          }
+          else if(typeof English!== 'number' ||English<0 ||English>76){
+            alert("marks should not be greater than 76");
+            return false;}
+            else if(typeof maths!=='number' ||maths<0 ||maths>76){
+                alert("marks should not be greater than 76");
+           
+                return false;}
+            else if(typeof statistics!=='number'||statistics<0||statistics>76){
+                alert("marks should not be greater than 76");
+           
+            return false;}
+            else if(typeof comps!=='number' ||comps<0||comps>76){
+                alert("marks should not be greater than 76");
+           
+            return false;}
+            else if(typeof statsprac!=='number'||statsprac<0||statsprac>76){
+            alert("marks should not be greater than 76");
+            return false;}
+            else
+            {
+                return true;
+            }
+        }
+    </script>
+    
+</body>
+</html>

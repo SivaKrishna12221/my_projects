@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert New Result</title>
+    <style>
+        body{
+             background-color: rgb(221 213 183); 
+        }
+        .div1{
+           background-color: rgb(219 203 215 / 44%);
+             width:300px;
+              height:450px;
+             box-sizing: content-box;
+             padding:20px 50px;
+             top:20%;
+             left:30%;
+             position: absolute;
+             border: 1px solid black;
+             border-radius:20px;
+        }
+        input {
+            background-color: transparent;
+            padding:4px 4px;
+            width:100%;
+            color:white;
+           
+            text-transform:uppercase;
+            border-radius:2px;
+        }
+        .div1 input[type="submit"]:hover
+        {  
+            color:rgb(93, 74, 113);
+            background-color:darkorchid;
+            }
+        .div1 input[type="submit"]
+        {
+          background: rgb(98, 79, 117);
+        }
+        .div1 a:hover{
+            color:rgb(22, 36, 61);
+            
+        }
+        
+    </style>
+
+</head>
+<body >
+    <form method="post" action="insertNewResult.jsp" >
+        <h1>Insert New Result</h1>
+        <hr 1px >
+        <div class="div1">
+           <label>Roll number:</label>
+           <input type="text" name="rollno" placeholder="Enter roll number">
+           <label>Sanskrit:</label>
+           <input type="text" name="number1" placeholder="Enter sankrit marks <=75">
+           <label>English:</label>
+           <input type="text" name="number2" placeholder="Enter English marks <=75">
+           <label>Maths:</label>
+           <input type="text" name="number3" placeholder="Enter Maths marks <=75">
+           <label>Statistics</label>
+           <input type="text" name="number4" placeholder="Enter Statistics marks <=75">
+           <label>Computers</label> 
+           <input type="text" name="number5" placeholder="Enter Computers marks <=75">
+           <label>Statistics</label>
+           <input type="text" name="number6" placeholder="Enter statistics practical marks <=30">
+           <label>Computers </label>
+           <input type="text" name="number7" placeholder="Enter computers practical marks <=30">
+           <br><br>
+           <input type="submit" name="submit" value="save">
+           <br><br>
+           <center><a href="adminHome.html">back</a></center>
+        </div> 
+        
+    </form>
+    
+</body>
+</html>

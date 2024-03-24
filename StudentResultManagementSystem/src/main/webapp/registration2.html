@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin registration</title>
+<style>
+body {
+	background-color: rgb(85, 220, 85);
+	color: black;
+}
+
+.div1 {
+	background-color: rgb(205, 223, 205);
+	width: 250px;
+	height: 300px;
+	box-sizing: border-box;
+	padding: 40px 20px;
+	top: 20%;
+	left: 40%;
+	position: absolute;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+input {
+	background-color: transparent;
+	width: 100%;
+}
+
+.div1 input[type=submit] {
+	background-color: blue;
+	color: white;
+}
+
+.div1 input[type=submit]:hover {
+	background-color: cornflowerblue;
+	color: darkorchid;
+}
+
+a hover {
+	color: blue;
+}
+
+.avatar {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: -40px;
+	left: calc(50% -50%);
+}
+</style>
+</head>
+
+<body>
+	<form name="form1" method="post" action="registration.jsp" onsubmit=" return validatePassword()">
+		<div class="div1">
+
+			<center>
+				<div
+					style="height: 50px; width: 50px; position: absolute; top: -10%; right: 60%">
+					<img class="avatar" src="admin image.png" alt="admin">
+				</div>
+			</center>
+			<center>Registered here</center>
+			<hr 1px solid black>
+			<lable>username</lable>
+			<input type="text" name="username" placeholder="Enter username"><br>
+			<lable>password</lable>
+			<input type="password" name="password1" placeholder="Enter password"><br>
+			<lable>re-entered password</lable>
+			<input type="password" name="password2"
+				placeholder="re-entered password"><br>
+			<br> <input type="submit" name="submit" value="register">
+			<br>
+			<br>
+			<center>
+				<a href="index.html">back</a>
+			</center>
+
+
+		</div>
+
+	</form>
+	<script>
+		function validatePassword() {
+			var name = document.form1.username.value;
+			var pword1 = document.form1.password1.value;
+			var pword2 = document.form1.password2.value;
+			if (name == null || name == "") {
+				alert("name should not be blank");
+				return false;
+			}
+			if (pword1.length < 10) {
+				alert("password must be greater than 10 characters")
+				return false;
+			}
+			if(pword1 != pword2) {
+				alert("password must be match")
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+			
+		}
+	</script>
+
+</body>
+
+</html>
