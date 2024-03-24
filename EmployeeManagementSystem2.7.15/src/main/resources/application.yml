@@ -1,0 +1,43 @@
+spring:
+ datasource:
+  driver-class-name: oracle.jdbc.driver.OracleDriver
+  url: jdbc:oracle:thin:@localhost:1521:orcl
+  username: siva
+  password: velpula
+  
+ jpa:
+  database-platform: org.hibernate.dialect.OracleDialect
+  show-sql: true
+  hibernate:
+   ddl-auto: update
+  properties:
+   hibernate:
+    enable_lazy_load_no_trans: true
+ messages:
+  basename: com/siva/commons/validation
+
+ mvc:
+  view:
+   prefix: /WEB-INF/pages/
+   suffix: .jsp
+  
+#server port Number
+server:
+ port: 4444
+ tomcat:
+  relaxed-path-chars: '<,>,[,\,],^,`,{,|,},:'
+  relaxed-query-chars: '<,>,[,\,],^,`,{,|,},:'
+#context path
+ servlet:
+  context-path: /employee_management_system
+states:
+ list: J&K,himachalPradesh,uttarpradesh,haryana,sikkim,nagaland,mizoram,arunachalpradesh,westbengal,odisha,ap,Telangana,tamilnadu,kerala,karnataka,maharastra,madhypradesh,chattisgarh,gujarat,punjab,rajasthan 
+cities:
+ list: delhi,gugram,mumbai,chennai,benglaru,hyderabad
+ 
+com:
+ nt:
+  config:
+   name: siva
+   age: 23
+   address: jp
