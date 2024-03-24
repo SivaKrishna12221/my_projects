@@ -1,0 +1,26 @@
+server:
+ port: 7001
+spring:
+ config:
+  import: "optional:configserver:"
+ jpa:
+  show-sql: true
+  hibernate:
+   ddl-auto: update
+   
+ application: 
+  name: IPL-PLAYER-SERVICE
+eureka:
+ client:
+  service-url: 
+   default-zone: http://localhost:8761/eureka
+management:
+ endpoints:
+  web:
+   exposure:
+    include: "*"
+
+ 
+logging:
+ file:
+  name: D:/ms-mini-proj/player.log

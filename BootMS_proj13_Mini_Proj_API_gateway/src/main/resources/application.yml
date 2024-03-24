@@ -1,0 +1,30 @@
+server:
+ port: 9799
+spring:
+ application:
+  name: IPL-API-GATEWAY
+# main:
+#  web-application-type: NONE
+ cloud:
+  gateway:
+   routes: # we can number of routes  so it is array type
+    - id: IPL-PLAYER-SERVICE # it is just identification
+      uri: lb://IPL-PLAYER-SERVICE # it is used for load balancing support 
+      predicates: #we can set multiple paths to identify a correct routing destination
+      - Path=/player-service/** #if the request come to this path then routes to ->http://localhost:5000/.....
+       #second routing
+      
+    - id: IPL-TEAM-SERVICE
+      uri: lb://IPL-TEAM-SERVICE
+      predicates: 
+      - Path=/ipl-teams/**
+management:
+ endpoints:
+  web:
+   exposure:
+    include: "*"
+eureka:
+ client:
+  service-url:
+   default-zone: http://localhost:8761/eureka
+      
